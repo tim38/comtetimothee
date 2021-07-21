@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbar } from '@angular/material/toolbar';
+import {MatSlider} from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbar,
+    MatSlider
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,MatToolbar,
+    MatSlider]
 })
 export class AppModule { }
