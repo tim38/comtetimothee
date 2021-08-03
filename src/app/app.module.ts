@@ -4,8 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbar } from '@angular/material/toolbar';
-import {MatSlider} from '@angular/material/slider';
+import { NgbNavModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+// import {} from '@angular/material/'
 
 @NgModule({
   declarations: [
@@ -15,11 +19,14 @@ import {MatSlider} from '@angular/material/slider';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbar,
-    MatSlider
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule,
+    NgbNavModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent,MatToolbar,
-    MatSlider]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

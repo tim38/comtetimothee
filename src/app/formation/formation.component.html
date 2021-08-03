@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<h1 class="text-center mt-2">
+		Expériences</h1>
+	<div class="row mt-2 justify-content-center">
+
+		<div *ngFor="let formation of formations$ |async" class="col-10 border rounded bg-white justify-content-center mt-2">
+			<div class="row">
+				<div class="col-2 mt-3 mb-3 text-center">
+					<!-- image -->
+					<img class="rounded m-2 img-fluid" width="150" height="150" src="{{formation.logo}}">
+					
+				</div>
+				<div class="col-10 mt-3 mb-3">
+					<div>
+						<h2 class="m-0 p-0">{{formation.diplome}}</h2>
+						<h3 class="m-0 p-0">{{formation.ecole}}</h3>
+						<h4 class="m-0 p-0 font-weight-light">{{formation.annee_debut}} - {{formation.annee_fin}}</h4>
+						<h4 class="m-0 p-0 font-weight-light">{{formation.emplacement}} <i class="bi bi-geo-alt"></i></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

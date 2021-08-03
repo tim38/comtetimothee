@@ -1,0 +1,47 @@
+<div class="container-fluid">
+	<h1 class="text-center mt-2">Contact</h1>
+	<div class="row mt-2 justify-content-center">
+
+		<div class="col-10 border rounded bg-white mt-2 justif-content-center">
+
+			<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="col-5 mx-auto m-3">
+
+				<div class="form-group">
+					<label for="name">Nom</label>
+					<input id="name" type="text" formControlName="name" class="form-control">
+					<div *ngIf="f.name.errors?.required && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+						Un nom est requis.
+					</div>
+					<div *ngIf="f.name.errors?.minlength && (f.name.dirty || f.name.touched)" class="alert alert-warning">
+						Le nom doit avoir au moins 4 caractères.
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input id="email" type="text" formControlName="email" class="form-control">
+					<div *ngIf="f.email?.errors?.required && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+						Un email est requis.
+					</div>
+					<div *ngIf="f.email.errors?.email && (f.email.dirty || f.email.touched)" class="alert alert-warning">
+						Le format de l'email fourni est incorrect.
+					</div>
+				</div>
+				<div class="form-group">
+                    <label for="message">Message</label>
+				    <textarea id="message" formControlName="message" class="form-control"></textarea>
+                    <div *ngIf="f.message?.errors?.required && (f.message.dirty || f.message.touched)" class="alert alert-danger">
+                        Un message est requis.
+                    </div>
+                    <div *ngIf="f.message.errors?.minlength && (f.message.dirty || f.message.touched)" class="alert alert-warning">
+                        Le message doit comporter au moins 20 caractères.
+                    </div>
+                    <div *ngIf="f.message.errors?.maxlength && (f.message.dirty || f.message.touched)" class="alert alert-warning">
+                        Le message ne doit comporter plus de 300 caractères.
+                    </div>
+                </div>
+				<button class="btn btn-primary btn-block mt-4" type="submit" [disabled]="!contactForm.valid">Envoyer</button>
+			</form>
+		</div>
+	</div>
+
+</div>

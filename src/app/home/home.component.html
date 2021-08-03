@@ -1,0 +1,84 @@
+<div class="container-fluid">
+	<h1 class="text-center mt-2">Accueil</h1>
+	<div class="row mt-2 justify-content-center">
+
+		<div class="col-10 border rounded bg-white mt-2">
+			<div class="row justify-content-between">
+                <div class="col m-5">
+                    <div class="row">
+                        <div class="col text-center">
+                            <img src={{generalInfo.image}}  class="img-fluid rounded-circle"><!-- image -->
+                        </div>
+                        <div class="col my-auto">
+                            <h1>{{generalInfo.prenom}}
+                                {{generalInfo.nom}}</h1>
+                            <h4>{{generalInfo.date_naissance}}</h4>
+                            <h4>{{generalInfo.emplacement}}</h4>
+							<p>
+								{{generalInfo.description}}
+							</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+
+		<div class="col-10 border rounded bg-white justify-content-center mt-2">
+
+			<h1 class="text-center mt-2">Compétences</h1>
+
+			<!-- Compétences , blabla, à propos -->
+			<div class="row mb-4">
+				<div class="col-4">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title">Langues</h2>
+							<p class="card-text">
+								Anglais:
+								<ngb-progressbar type="success" [value]="80"></ngb-progressbar>
+								Allemand :
+								<ngb-progressbar type="success" [value]="40"></ngb-progressbar>
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title">Développement</h2>
+							<p class="card-text">
+								<ul>
+									<li>Langages : HTML , CSS , C# ,
+                                        Python,Java,Php,SQL</li>
+									<li>Bases de données : MySQL ,
+                                        Oracle,PostgreSQL</li>
+                                    <li>
+                                        Plateforme de développement : VisualStudio, Android Studio
+                                    </li>
+                                    <li>
+                                        Framework : Bootstrap, Symfony, jQuery , Angular
+                                    </li>
+								</ul>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title">Certifications</h2>
+							<p class="card-text">
+                                <ul class="list-group list-group ">
+                                    <li class="list-group-item"><img  class="img-fluid img-rounded" src="https://img2.freepng.fr/20180324/sbe/kisspng-google-logo-g-suite-google-5ab6f1f0dbc9b7.1299911115219389289003.jpg" width="30" height="30"> Google Digital Active</li>
+                                    <li class="list-group-item"><img class="img-fluid img-rounded" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/EF_Education_First_Logo.png" width="30" height="30"> SET English Certificate 78/100 (C2 PROFICIENT)</li>
+                                </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
